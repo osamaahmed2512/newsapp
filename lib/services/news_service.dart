@@ -10,6 +10,8 @@ class NewService {
     try {
       Response response = await dio.get(
           'https://newsapi.org/v2/top-headlines?country=us&apiKey=bec009a316a641108076915c9c0ecefb&category=$category');
+     
+      
       Map<String, dynamic> jsondata = response.data;
       List<dynamic> articles = jsondata["articles"];
       // List<Map<String, dynamic>> articles= jsondata['articles']as List<Map<String, dynamic>> ;

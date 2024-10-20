@@ -9,10 +9,13 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          NewListViewBuilder(category:category,),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        child: CustomScrollView(
+          slivers: [
+            NewListViewBuilder(category:category,),
+          ],
+        ),
       ),
     );
   }
